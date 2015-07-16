@@ -1,9 +1,10 @@
 'use strict';
 
-
 angular.module('core').controller('HomeController', ['$scope', 'Authentication', 'characterKey', function($scope, Authentication, characterKey) {
 	// This provides Authentication context.
 	$scope.authentication = Authentication;
+
+    $scope.radioModel = 'Blue'; // default value
 
     $scope.logoName = "";
     $scope.logoName_array = [];
@@ -39,9 +40,13 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
             $scope.outputLogo = 'ERROR: Unrecognized Characters!';
         }
 
-        else {
+        else if ($scope.logoName_array.length > 0) {
             $scope.outputLogo = output_line1 + '\n' + output_line2 + '\n' + output_line3 + '\n' + output_line4 + '\n' + output_line5;
             console.log($scope.outputLogo);
+        }
+
+        else {
+            $scope.outputLogo = '';
         }
     };
 
