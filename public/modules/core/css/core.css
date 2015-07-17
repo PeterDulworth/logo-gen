@@ -1,6 +1,9 @@
 textarea {
     font-family: monospace !important;
 }
+.monospaced {
+    font-family: monospace !important;
+}
 .content {
 	margin-top: 50px;
 }

@@ -1,0 +1,15 @@
+<section data-ng-controller="LogosController" data-ng-init="findOne()">
+    <div class="page-header">
+        <h1>Edit Logo</h1>
+    </div>
+    <div class="row">
+        <form data-ng-submit="update()" novalidate>
+            <div class="form-group col-xs-8 col-xs-offset-2">
+                <input type="text" class="input-lg form-control simplebox" id="logoName" placeholder="Logo Name" data-ng-model="logo.name">
+            </div>
+            <div class="form-group col-xs-8 col-xs-offset-2">
+                <input type="submit" value="Update" class="btn btn-lg btn-info">
+            </div>
+        </form>
+    </div>
+</section>

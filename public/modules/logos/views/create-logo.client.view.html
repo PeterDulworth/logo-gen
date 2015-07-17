@@ -1,0 +1,21 @@
+<section data-ng-controller="LogosController">
+    <div class="page-header">
+        <h1>New Logo</h1>
+    </div>
+    <div class="row">
+        <form data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group col-xs-8 col-xs-offset-2">
+                    <input type="text" class="input-lg form-control simplebox" id="logoName" placeholder="Logo Name" data-ng-model="name" required>
+                </div>
+                <div class="form-group col-xs-8 col-xs-offset-2">
+                    <input type="submit" value="Logoify!" class="btn btn-lg btn-info">
+                </div>
+                <div data-ng-show="error" class="text-danger">
+                    <strong data-ng-bind="error"></strong>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    
+</section>
